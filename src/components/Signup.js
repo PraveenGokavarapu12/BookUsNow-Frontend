@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Signup = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate=useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -17,6 +19,7 @@ const Signup = ({ setIsLoggedIn }) => {
     users.push({ username, password });
     localStorage.setItem("users", JSON.stringify(users));
     alert("Signup successful! Please login.");
+    navigate('/login')
   };
 
   return (

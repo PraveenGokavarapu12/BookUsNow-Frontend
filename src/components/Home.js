@@ -17,7 +17,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const totalPages = 5; // Adjust based on API data
 
-  const url1 = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${process.env.SECRET_KEY}==&type=reco`;
+  const url1 = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${process.env.REACT_APP_SECRET_KEY}==&type=reco`;
 
   const loader = () => {
     return (
@@ -54,7 +54,7 @@ const Home = () => {
     if (loading2 || page > totalPages) return;
 
     setLoading2(true);
-    const url2 = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${process.env.SECRET_KEY}==&page=${page}&type=upcoming`;
+    const url2 = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${process.env.REACT_APP_SECRET_KEY}==&page=${page}&type=upcoming`;
 
     try {
       const res = await fetch(url2);
