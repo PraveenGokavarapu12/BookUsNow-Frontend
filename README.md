@@ -4,15 +4,14 @@
 This is an event discovery web application that helps users find recommended and upcoming events. The app features lazy loading, infinite scrolling, and a smooth user experience using modern frontend technologies.
 
 ## 🚀 Features
-- 📌 **Recommended Events Carousel** using Swiper.js
 - 🔄 **Infinite Scrolling** for upcoming events
 - 🕗 **Lazy Loading** of components and images
 - 🔗 **Real-time Data Fetching** from an external API
 - 🎨 **Modern UI** with Tailwind CSS
+- 🔐 **User Authentication** (Login/Signup with JWT)
 
 ## 🛠️ Tech Stack
 - **React.js** (Functional Components, Hooks)
-- **Swiper.js** (Carousel for recommended events)
 - **React Infinite Scroll Component** (Lazy loading and pagination)
 - **React Loader Spinner** (Loading indicators)
 - **Tailwind CSS** (Styling)
@@ -80,24 +79,9 @@ const EventCard = lazy(() => import("./EventCard"));
 </InfiniteScroll>
 ```
 
-### Swiper.js for Recommended Events
-```jsx
-<Swiper slidesPerView={3} navigation pagination={{ clickable: true }}>
-  {recommendedEvents.map(event => (
-    <SwiperSlide key={event.id}><EventCard {...event} /></SwiperSlide>
-  ))}
-</Swiper>
-```
+
 
 ## 📌 Future Improvements
-- 🔐 **User Authentication** (Login/Signup with JWT)
-- 🎭 **Dark Mode** Toggle
+
 - 📍 **Location-based Event Suggestions**
 - 🗂 **Bookmarking & Favorites**
-
-## 🏆 Contributors
-- **[Your Name](https://github.com/your-username)**
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
